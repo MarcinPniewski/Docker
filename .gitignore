@@ -1,0 +1,8 @@
+logs/
+data/
+.env
+*.swp
+*.log
+*.tmp
+*.bak
+.DS_Store

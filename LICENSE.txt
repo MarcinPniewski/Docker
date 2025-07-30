@@ -1,0 +1,7 @@
+Copyright (c) 2025 Marcin Pniewski
+
+Permission is granted to use the materials in this repository solely for **non-commercial testing, evaluation, or educational purposes**.
+
+Redistribution, modification, sublicensing, or use in production systems is **strictly prohibited** without the author's prior written consent.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
