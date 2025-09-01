@@ -1,0 +1,79 @@
+name: Release from CHANGELOG
+
+on:
+  push:
+    tags:
+      - 'v*.*'      # opcjonalnie: v1.2
+      - '*.*'       # Twój przypadek: 1.2
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Wersja (np. 1.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract changelog section for this version
+        id: changelog
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # 1) Weź wersję z workflow_dispatch (jeśli podano), w p.p. z taga
+          VERSION="${{ inputs.version || '' }}"
+          if [ -z "$VERSION" ]; then
+            TAG="${GITHUB_REF#refs/tags/}"
+            VERSION="${TAG#v}"
+          fi
+
+          FILE="CHANGELOG.md"
+          if [ ! -f "$FILE" ]; then
+            echo "Brak pliku $FILE w katalogu głównym." >&2
+            exit 1
+          fi
+
+          # 2) Znajdź początek sekcji dla tej wersji
+          START_LINE="$(grep -n "^## \[$VERSION\]" "$FILE" | head -n1 | cut -d: -f1 || true)"
+          if [ -z "${START_LINE:-}" ]; then
+            echo "Nie znaleziono wpisu changeloga dla wersji $VERSION." >&2
+            exit 1
+          fi
+
+          # 3) Wytnij sekcję do kolejnego '## [' lub końca pliku
+          tail -n +"$START_LINE" "$FILE" > _cl_tmp.txt
+          END_REL_LINE="$(awk 'NR>1 && /^## \[/{print NR-1; exit}' _cl_tmp.txt || true)"
+          if [ -n "${END_REL_LINE:-}" ]; then
+            head -n "$END_REL_LINE" _cl_tmp.txt > _cl_body.txt
+          else
+            cp _cl_tmp.txt _cl_body.txt
+          fi
+
+          BODY="$(cat _cl_body.txt)"
+
+          # 4) Zwróć dwa outputy: body i version
+          {
+            echo "body<<EOF"
+            printf '%s\n' "$BODY"
+            echo "EOF"
+            echo "version=$VERSION"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ steps.changelog.outputs.version }}
+          tag_name: ${{ steps.changelog.outputs.version }}
+          body: ${{ steps.changelog.outputs.body }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

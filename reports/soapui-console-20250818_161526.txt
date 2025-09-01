@@ -1,0 +1,1531 @@
+================================
+=
+= SOAPUI_HOME = /opt/SoapUI-5.9.0
+=
+================================
+SoapUI 5.9.0 TestCase Runner
+16:15:27,398 INFO  [DefaultSoapUICore] Creating new settings at [/home/tester/soapui-settings.xml]
+16:15:27,946 INFO  [PluginManager] 0 plugins loaded in 0 ms
+16:15:27,947 INFO  [DefaultSoapUICore] All plugins loaded
+16:15:28,954 INFO  [WsdlProject] Loaded project from [file:/opt/tests/SoapUI/project/Testy_aplikacji_testowej.xml]
+16:15:28,959 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Testy aplikacji testowej]
+16:15:28,959 INFO  [SoapUITestCaseRunner] Running TestCase [statusZadania]
+16:15:29,555 INFO  [log] Tryb CLI – przekazano kod zadania: 'zadanie_2'
+16:15:29,572 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [statusZadania]
+16:15:29,585 INFO  [SoapUITestCaseRunner] running step [Odpowiedź]
+16:15:30,159 ERROR [log]  Wystąpiły błędy 'FAILED' dla zadania zadanie_2: 
+16:15:30,160 ERROR [log]       |  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+16:15:30,160 ERROR [log]       |  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+16:15:30,160 ERROR [log]       |  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+16:15:30,163 ERROR [log]   Szczegóły:
+16:15:30,165 ERROR [log]       #2 Zakladanie/Tabela_2@zadanie_2
+16:15:30,165 ERROR [log]       READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+16:15:30,165 ERROR [log]       #5 Weryfikacja/Tabela_2@zadanie_2
+16:15:30,165 ERROR [log]       READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+16:15:30,166 ERROR [log]       #8 Kopiowanie/Tabela_2@zadanie_2
+16:15:30,166 ERROR [log]       WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+16:15:30,166 ERROR [log]       Caused by: java.lang.RuntimeException: MoveAndCommit failed
+16:15:30,166 ERROR [log]       Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+16:15:30,193 INFO  [log] Tryb CLI – pomijam wyświetlanie okna dialogowego.
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Pierwsza linia] has status VALID
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Naglowek] has status VALID
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Kod zadania] has status VALID
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Podsumowanie] has status VALID
+16:15:30,196 INFO  [SoapUITestCaseRunner] Assertion [Brak "FILED"] has status FAILED
+16:15:30,196 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response contains token [FAILED]
+16:15:30,196 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response contains token [FAILED]
+16:15:30,197 INFO  [SoapUITestCaseRunner] Assertion [Brak "Failures"] has status FAILED
+16:15:30,197 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response contains token [Failures]
+16:15:30,197 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response contains token [Failures]
+16:15:30,197 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+16:15:30,203 ERROR [SoapUITestCaseRunner] Odpowiedź failed, exporting to [/opt/reports/Aplikacja_testowa-statusZadania-Odpowiedź-0-FAILED.txt]
+16:15:30,203 ERROR [SoapUITestCaseRunner] Odpowiedź failed, exporting to [/opt/reports/Aplikacja_testowa-statusZadania-Odpowiedź-0-FAILED.txt]
+16:15:30,228 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [statusZadania], time taken: 21ms, status: FAILED
+16:15:30,232 INFO  [SoapUITestCaseRunner] TestCase [statusZadania] finished with status [FAILED] in 21ms
+
+SoapUI 5.9.0 TestCaseRunner Summary
+-----------------------------
+Time Taken: 1273ms
+Total TestSuites: 0
+Total TestCases: 1 (1 failed)
+Total TestSteps: 1
+Total Request Assertions: 8
+Total Failed Assertions: 2
+Total Exported Results: 1
+16:15:30,248 ERROR [SoapUITestCaseRunner] java.lang.Exception: Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+
+16:15:30,248 ERROR [SoapUITestCaseRunner] java.lang.Exception: Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+
+16:15:30,251 ERROR [SoapUI] An error occurred [Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+], see error log for details
+16:15:30,251 ERROR [SoapUI] An error occurred [Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+], see error log for details
+16:15:30,259 ERROR [errorlog] java.lang.Exception: Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+
+java.lang.Exception: Brak "FILED" in [Odpowiedź] failed;
+[Response contains token [FAILED]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+Brak "Failures" in [Odpowiedź] failed;
+[Response contains token [Failures]]
+Status: FAILED
+Time Taken: 21
+Size: 8555
+Timestamp: Mon Aug 18 16:15:29 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Brak "FILED"] Response contains token [FAILED]
+[Brak "Failures"] Response contains token [Failures]
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 200
+URL: http://localhost:8089/statusZadania?kod=zadanie_2
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_2 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 200 OK]
+Content-Length: [8555]
+Date: [Mon, 18 Aug 2025 14:15:29 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_2'
+Task summary Generated At: Fri Jun 27 08:23:44 CEST 2025
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+|zadanie_2                                             |FAILED   |0 */5 * * * *                 |2025-06-27 08:20:00 |2025-06-27 08:20:12 |2025-05-21 14:10:00 |
++------------------------------------------------------+---------+------------------------------+--------------------+--------------------+--------------------+
+
+
+Podsumowanie
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+| lp|Klasa         |Zawartosc                              |Status   |Start              |Koniec             |   Wierszy|Predkosc|Ostatni dostep     | Wierszy/h|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+|  1|Zakladanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  2|Zakladanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  3|Zakladanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:00|2025-06-27 08:20:00|         0|       0|                   |         0|
+|  4|Weryfikacja   |Tabela_1                               |FINISHED |2025-06-27 08:20:07|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  5|Weryfikacja   |Tabela_2                               |FAILED   |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  6|Weryfikacja   |Tabela_3                               |FINISHED |2025-06-27 08:20:08|2025-06-27 08:20:08|         0|       0|                   |         0|
+|  7|Kopiowanie    |Tabela_1                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      1500|       0|                   |         0|
+|  8|Kopiowanie    |Tabela_2                               |FAILED   |2025-06-27 08:20:09|2025-06-27 08:20:10|      3000|       0|                   |         0|
+|  9|Kopiowanie    |Tabela_3                               |FINISHED |2025-06-27 08:20:09|2025-06-27 08:20:09|      6000|       0|                   |         0|
++---+--------------+---------------------------------------+---------+-------------------+-------------------+----------+--------+-------------------+----------+
+
+
+Failures:
+#2 Zakladanie/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#5 Weryfikacja/Tabela_2@zadanie_2
+READER: org.postgresql.util.PSQLException: ERROR: relation "zadanie_2.Tabela_2" does not exist
+  Position: 175
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:153)
+        at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:103)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.runSql(AbstractDBReader.java:49)
+        at zaq.wsx.cde.aplik.processing.reader.AbstractDBReader.run(AbstractDBReader.java:42)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+
+#8 Kopiowanie/Tabela_2@zadanie_2
+WRITER: java.lang.RuntimeException: MoveAndCommit call() failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:327)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.insertBatch(WriterMultiPGCopy.java:153)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.processRows(AbstractMultiPGWriter.java:188)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.WriterMultiPGCopy.run(WriterMultiPGCopy.java:130)
+        at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.RuntimeException: MoveAndCommit failed
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:323)
+        ... 4 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "column_6" of relation "column_3" violates not-null constraint
+  Detail: Failing row contains (139197, 2025-06-26 19:32:25.989215, 250086, 254655, 5, null, 2025-06-26 19:32:35.087, 2.16.840.1.113883.3.4424.7.26.1, 7220, 1, 1641191, 274219, 2025-06-27 08:20:09.768738, 2025-06-27 08:20:09.768738, SYS_ZEWN, null).
+  Where: SQL statement "INSERT INTO schema_name.tabela_2(column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13) SELECT column_1, column_2, column_3, column_4, column_5, column_6, column_7, column_8, column_9, column_10, column_11, column_12, column_13 FROM temp_table_name ON CONFLICT(column_1) DO UPDATE SET column_6  = EXCLUDED.column_6, column_3  = EXCLUDED.column_3, column_4  = EXCLUDED.column_4, column_12 = EXCLUDED.column_12, column_11 = EXCLUDED.column_11, column_13 = EXCLUDED.column_13, column_9  = EXCLUDED.column_9, column_10 = EXCLUDED.column_10, column_5  = EXCLUDED.column_5, column_2  = EXCLUDED.column_2, column_8  = EXCLUDED.column_8, column_7  = EXCLUDED.column_7"
+PL/pgSQL function inline_code_block line 4 at SQL statement
+        at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2532)
+        at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2267)
+        at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:312)
+        at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:448)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:369)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:310)
+        at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:296)
+        at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:273)
+        at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:268)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveDataFromGtt(AbstractMultiPGWriter.java:147)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.moveAndCommitToPG(AbstractMultiPGWriter.java:296)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter$MoveAndCommitCallable.call(AbstractMultiPGWriter.java:415)
+        at zaq.wsx.cde.aplik.processing.writer.multi.connection.AbstractMultiPGWriter.executeMoveAndCommit(AbstractMultiPGWriter.java:321)
+        ... 4 more
+
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.throwFailureException(SoapUITestCaseRunner.java:520) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.runRunner(SoapUITestCaseRunner.java:436) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.run(AbstractSoapUIRunner.java:228) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.run(AbstractSoapUIRunner.java:148) [soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.runFromCommandLine(AbstractSoapUIRunner.java:116) [soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.main(SoapUITestCaseRunner.java:122) [soapui-5.9.0.jar:5.9.0]

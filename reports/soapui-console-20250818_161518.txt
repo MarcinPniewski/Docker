@@ -1,0 +1,36 @@
+================================
+=
+= SOAPUI_HOME = /opt/SoapUI-5.9.0
+=
+================================
+SoapUI 5.9.0 TestCase Runner
+16:15:19,262 INFO  [DefaultSoapUICore] Creating new settings at [/home/tester/soapui-settings.xml]
+16:15:19,751 INFO  [PluginManager] 0 plugins loaded in 1 ms
+16:15:19,751 INFO  [DefaultSoapUICore] All plugins loaded
+16:15:20,880 INFO  [WsdlProject] Loaded project from [file:/opt/tests/SoapUI/project/Testy_aplikacji_testowej.xml]
+16:15:20,886 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Testy aplikacji testowej]
+16:15:20,886 INFO  [SoapUITestCaseRunner] Running TestCase [statusZadania]
+16:15:21,493 INFO  [log] Tryb CLI – przekazano kod zadania: 'zadanie_1'
+16:15:21,536 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [statusZadania]
+16:15:21,540 INFO  [SoapUITestCaseRunner] running step [Odpowiedź]
+16:15:22,136 INFO  [log]     Nie wystąpił błąd 'FAILED' dla zadania zadanie_1
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Pierwsza linia] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Naglowek] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Kod zadania] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Podsumowanie] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Brak "FILED"] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Brak "Failures"] has status VALID
+16:15:22,138 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status VALID
+16:15:22,163 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [statusZadania], time taken: 27ms, status: FINISHED
+16:15:22,165 INFO  [SoapUITestCaseRunner] TestCase [statusZadania] finished with status [FINISHED] in 27ms
+
+SoapUI 5.9.0 TestCaseRunner Summary
+-----------------------------
+Time Taken: 1279ms
+Total TestSuites: 0
+Total TestCases: 1 (0 failed)
+Total TestSteps: 1
+Total Request Assertions: 8
+Total Failed Assertions: 0
+Total Exported Results: 0
