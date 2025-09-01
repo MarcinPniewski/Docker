@@ -1,8 +1,56 @@
-logs/
-data/
-.env
-*.swp
-*.log
-*.tmp
-*.bak
+# Systemowe pliki tymczasowe
 .DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Pliki tymczasowe edytorów
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*~
+
+# Pliki z edytorów/IDE
+.vscode/
+.idea/
+*.log
+
+# Katalogi tymczasowe
+node_modules/
+__pycache__/
+.cache/
+dist/
+build/
+coverage/
+venv/
+.env
+
+# Pliki systemów CI/CD
+*.pid
+*.seed
+*.pid.lock
+
+# Archiwa i paczki
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# Backupy
+*.orig
+*.rej
+*.bak
+*.old
+
+# Private files
+.env.*
+secrets.*
+*.pem
+*.key
+
+# Własne
+data/
+logs/

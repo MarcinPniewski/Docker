@@ -1,20 +1,73 @@
+# Wspólne pola środowiskowe
+x-common-env: &common-env
+  env_file:
+    - versions.env
+  environment:
+    TZ: Europe/Warsaw
+
 services:
+  # === DEV: bind-mounty widoczne na hoście ===
   api-tests:
+    <<: *common-env
+    profiles: ["dev"]
+
     build:
       context: ..
       dockerfile: Docker/Dockerfile
-    image: docker-api-tests
-    container_name: docker-api-tests-instance
-    command: python3 run.py
+      args:
+        JAVA_VERSION: ${JAVA_VERSION}
+        SOAPUI_VERSION: ${SOAPUI_VERSION}
+        NODE_VERSION: ${NODE_VERSION}
+        MOCKSERVICE_VERSION: ${MOCKSERVICE_VERSION}
+        TESTS_SOAPUI_VERSION: ${TESTS_SOAPUI_VERSION}
+
+    image: docker-api-tests:latest
+    container_name: docker-api-tests-dev
+    command: python3 /opt/MockService/run.py
+
     ports:
       - "8089:8089"
+
     volumes:
-      - docker-api-data:/app/data
       - ./logs:/var/log
+      - ./reports:/opt/reports
+
+    stdin_open: true
+    tty: true
+    restart: "no"
+
+  # === CI: nazwane wolumeny Dockera (artefakty zrzucasz docker cp) ===
+  api-tests-ci:
+    <<: *common-env
+    profiles: ["ci"]
+
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
+      args:
+        JAVA_VERSION: ${JAVA_VERSION}
+        SOAPUI_VERSION: ${SOAPUI_VERSION}
+        NODE_VERSION: ${NODE_VERSION}
+        MOCKSERVICE_VERSION: ${MOCKSERVICE_VERSION}
+        TESTS_SOAPUI_VERSION: ${TESTS_SOAPUI_VERSION}
+
+    image: docker-api-tests:latest
+    container_name: docker-api-tests-ci
+    command: python3 /opt/MockService/run.py
+
+    ports:
+      - "8089:8089"
+
+    volumes:
+      - logs:/var/log
+      - reports:/opt/reports
+
     stdin_open: true
     tty: true
     restart: "no"
 
 volumes:
-  docker-api-data:
-    name: docker-api-data
+  logs:
+    name: docker-api-logs
+  reports:
+    name: docker-api-reports

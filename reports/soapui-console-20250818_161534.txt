@@ -1,0 +1,1718 @@
+================================
+=
+= SOAPUI_HOME = /opt/SoapUI-5.9.0
+=
+================================
+SoapUI 5.9.0 TestCase Runner
+16:15:35,140 INFO  [DefaultSoapUICore] Creating new settings at [/home/tester/soapui-settings.xml]
+16:15:35,648 INFO  [PluginManager] 0 plugins loaded in 1 ms
+16:15:35,648 INFO  [DefaultSoapUICore] All plugins loaded
+16:15:36,834 INFO  [WsdlProject] Loaded project from [file:/opt/tests/SoapUI/project/Testy_aplikacji_testowej.xml]
+16:15:36,838 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Testy aplikacji testowej]
+16:15:36,838 INFO  [SoapUITestCaseRunner] Running TestCase [statusZadania]
+16:15:37,482 INFO  [log] Tryb CLI – przekazano kod zadania: 'zadanie_3'
+16:15:37,510 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [statusZadania]
+16:15:37,514 INFO  [SoapUITestCaseRunner] running step [Odpowiedź]
+16:15:38,082 ERROR [log]  Nie znaleziono linii zawierającej kod zadania: zadanie_3
+16:15:38,096 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status FAILED
+16:15:38,096 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:400 is not in acceptable list of status codes
+16:15:38,096 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:400 is not in acceptable list of status codes
+16:15:38,096 INFO  [SoapUITestCaseRunner] Assertion [Pierwsza linia] has status FAILED
+16:15:38,096 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [Task summary Generated At] in Response
+16:15:38,096 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [Task summary Generated At] in Response
+16:15:38,098 INFO  [SoapUITestCaseRunner] Assertion [Naglowek] has status FAILED
+16:15:38,098 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+16:15:38,098 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+16:15:38,099 INFO  [SoapUITestCaseRunner] Assertion [Kod zadania] has status FAILED
+16:15:38,099 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [|zadanie_3] in Response
+16:15:38,099 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [|zadanie_3] in Response
+16:15:38,099 INFO  [SoapUITestCaseRunner] Assertion [Podsumowanie] has status FAILED
+16:15:38,100 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [Podsumowanie] in Response
+16:15:38,100 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Missing token [Podsumowanie] in Response
+16:15:38,100 INFO  [SoapUITestCaseRunner] Assertion [Brak "FILED"] has status VALID
+16:15:38,100 INFO  [SoapUITestCaseRunner] Assertion [Brak "Failures"] has status VALID
+16:15:38,100 INFO  [SoapUITestCaseRunner] Assertion [Script Assertion] has status FAILED
+16:15:38,100 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> No such property: testRunner for class: Script1
+16:15:38,100 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> No such property: testRunner for class: Script1
+16:15:38,105 ERROR [SoapUITestCaseRunner] Odpowiedź failed, exporting to [/opt/reports/Aplikacja_testowa-statusZadania-Odpowiedź-0-FAILED.txt]
+16:15:38,105 ERROR [SoapUITestCaseRunner] Odpowiedź failed, exporting to [/opt/reports/Aplikacja_testowa-statusZadania-Odpowiedź-0-FAILED.txt]
+16:15:38,132 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [statusZadania], time taken: 20ms, status: FAILED
+16:15:38,138 INFO  [SoapUITestCaseRunner] TestCase [statusZadania] finished with status [FAILED] in 20ms
+
+SoapUI 5.9.0 TestCaseRunner Summary
+-----------------------------
+Time Taken: 1299ms
+Total TestSuites: 0
+Total TestCases: 1 (1 failed)
+Total TestSteps: 1
+Total Request Assertions: 8
+Total Failed Assertions: 6
+Total Exported Results: 1
+16:15:38,157 ERROR [SoapUITestCaseRunner] java.lang.Exception: Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+
+16:15:38,157 ERROR [SoapUITestCaseRunner] java.lang.Exception: Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+
+16:15:38,160 ERROR [SoapUI] An error occurred [Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+], see error log for details
+16:15:38,160 ERROR [SoapUI] An error occurred [Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+], see error log for details
+16:15:38,162 ERROR [errorlog] java.lang.Exception: Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+
+java.lang.Exception: Valid HTTP Status Codes in [Odpowiedź] failed;
+[Response status code:400 is not in acceptable list of status codes]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Pierwsza linia in [Odpowiedź] failed;
+[Missing token [Task summary Generated At] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Naglowek in [Odpowiedź] failed;
+[Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Kod zadania in [Odpowiedź] failed;
+[Missing token [|zadanie_3] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Podsumowanie in [Odpowiedź] failed;
+[Missing token [Podsumowanie] in Response]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+Script Assertion in [Odpowiedź] failed;
+[No such property: testRunner for class: Script1]
+Status: FAILED
+Time Taken: 20
+Size: 104
+Timestamp: Mon Aug 18 16:15:37 CEST 2025
+TestStep: Odpowiedź
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes
+[Pierwsza linia] Missing token [Task summary Generated At] in Response
+[Naglowek] Missing token [|Kod                                                   |Status   |Cron                          |Start               |Koniec              |Ostatnie OK         |] in Response
+[Kod zadania] Missing token [|zadanie_3] in Response
+[Podsumowanie] Missing token [Podsumowanie] in Response
+[Script Assertion] No such property: testRunner for class: Script1
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://localhost:8089/
+Method: GET
+StatusCode: 400
+URL: http://localhost:8089/statusZadania?kod=zadanie_3
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/21.0.8)]
+Host: [localhost:8089]
+Accept-Encoding: [gzip,deflate]
+
+GET http://localhost:8089/statusZadania?kod=zadanie_3 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: localhost:8089
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/21.0.8)
+
+
+---------------- Response --------------------------
+Server: [Werkzeug/3.1.3 Python/3.11.13]
+Connection: [close]
+#status#: [HTTP/1.1 400 BAD REQUEST]
+Content-Length: [104]
+Date: [Mon, 18 Aug 2025 14:15:37 GMT]
+Content-Type: [text/plain; charset=utf-8]
+
+user@pmaszyna:~ > curl 'http://aplikacja:8089/statusZadania?kod=zadanie_3'
+BRAK ZADANIA O PODANYM KODZIE
+
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.throwFailureException(SoapUITestCaseRunner.java:520) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.runRunner(SoapUITestCaseRunner.java:436) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.run(AbstractSoapUIRunner.java:228) ~[soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.run(AbstractSoapUIRunner.java:148) [soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.runFromCommandLine(AbstractSoapUIRunner.java:116) [soapui-5.9.0.jar:5.9.0]
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.main(SoapUITestCaseRunner.java:122) [soapui-5.9.0.jar:5.9.0]
